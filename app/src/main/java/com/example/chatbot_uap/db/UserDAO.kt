@@ -5,16 +5,17 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 
+/**
+ * Gini bro, ini tuh Data Access Object (DAO) buat si User.
+ * Jadi, ini tuh isinya function-function buat ngobrol sama tabel 'user_table' di database gitu.
+ * Kayak mau nambahin user baru, atau nyari user, nah lewat sini semua.
+ */
 @Dao
 interface UserDAO {
-
-    // Fungsi buat nambahin user baru pas register
-    // onConflict = OnConflictStrategy.IGNORE artinya kalo ada data yg sama, diemin aja.
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun addUser(user: User)
 
-    // Fungsi buat ngecek user pas login
-    // Kita cari user berdasarkan email dan sandi yang diinput.
-    @Query("SELECT * FROM user_table WHERE email = :email AND sandi = :sandi LIMIT 1")
-    suspend fun findUserByEmailAndPassword(email: String, sandi: String): User?
+    // DIUBAH: Kita cuma butuh cari user berdasarkan email
+    @Query("SELECT * FROM user_table WHERE email = :email LIMIT 1")
+    suspend fun findUserByEmail(email: String): User?
 }

@@ -1,11 +1,13 @@
 package com.example.chatbot_uap.login
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
@@ -19,6 +21,7 @@ class Login : AppCompatActivity() {
 
     private lateinit var userViewModel: UserViewModel
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -40,10 +43,11 @@ class Login : AppCompatActivity() {
 
             if (email.isNotEmpty() && password.isNotEmpty()) {
                 lifecycleScope.launch {
-                    val user = userViewModel.findUserByEmailAndPassword(email, password)
+                    val user = userViewModel.loginUser(email, password)
                     if (user != null) {
                         // Login Berhasil
                         Toast.makeText(this@Login, "Login Berhasil!", Toast.LENGTH_SHORT).show()
+                        // Ganti Class yang ada di Line 48 sama class yang lu mau akses kalo loginnya berhasil
                         val intent = Intent(this@Login, MainActivity::class.java)
                         startActivity(intent)
                         finish()

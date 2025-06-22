@@ -10,6 +10,13 @@ abstract class UserDatabase : RoomDatabase() {
 
     abstract fun userDao(): UserDAO
 
+    /**
+     * Jadi gini, ini tuh kayak 'besti'-nya si `UserDatabase`.
+     *
+     * Tugasnya tuh simpel, cuma nyediain satu doang instance dari `UserDatabase` pake method `getDatabase`.
+     * Biar apa? Biar gak kebanyakan database instance gitu lho, jadi cuma satu aja yang dipake di seluruh aplikasi.
+     * Hemat resource, brokk! ✨
+     */
     companion object {
         @Volatile
         private var INSTANCE: UserDatabase? = null
