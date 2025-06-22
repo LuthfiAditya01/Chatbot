@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E6F4FF">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="24dp">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/logo_unila"
+            android:layout_marginTop="40dp" />
+
+        <!-- Judul -->
+        <TextView
+            android:id="@+id/aripaTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ARIPA"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="#1976D2"
+            android:fontFamily="@font/macondo_swash_caps_regular"
+            android:layout_marginTop="12dp" />
+
+        <!-- Subjudul -->
+        <TextView
+            android:id="@+id/subTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Asisten Riset dan Informasi\nTerpadu FMIPA"
+            android:textAlignment="center"
+            android:textColor="#444"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:gravity="center" />
+
+        <!-- Email -->
+        <EditText
+            android:id="@+id/inputEmail"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/bg_input"
+            android:padding="12dp"
+            android:layout_marginTop="32dp" />
+
+        <!-- Password -->
+        <EditText
+            android:id="@+id/inputPassword"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:background="@drawable/bg_input"
+            android:padding="12dp"
+            android:layout_marginTop="12dp" />
+
+        <!-- Tombol Daftar -->
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="264dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_button_daftar"
+            android:text="Daftar"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <!-- Sudah punya akun? -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:id="@+id/tvSudahPunyaAkun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sudah punya akun?"
+                android:textColor="#666666"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvMasukDiSini"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Masuk di sini"
+                android:textColor="#1565C0"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

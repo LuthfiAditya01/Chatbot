@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="24dp"
+    android:background="#E3F2FD">
+
+    <!-- Logo -->
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/logo_unila"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Logo" />
+
+    <!-- Nama Aplikasi -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ARIPA"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/macondo_swash_caps"
+        android:textColor="#1565C0"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Deskripsi Aplikasi -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Asisten Riset dan Informasi\nTerpadu FMIPA"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:textColor="#444444"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Input Email -->
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_input"
+        android:hint="Email"
+        android:paddingHorizontal="16dp"
+        android:inputType="textEmailAddress"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Input Password -->
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_input"
+        android:hint="Password"
+        android:paddingHorizontal="16dp"
+        android:inputType="textPassword"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Tombol Masuk -->
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="264dp"
+        android:layout_height="48dp"
+        android:text="Masuk"
+        android:textColor="@android:color/white"
+        android:background="@drawable/bg_button_daftar"
+        android:textStyle="bold" />
+
+    <!-- Link ke Register -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Belum punya akun?"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvDaftarDiSini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Daftar di sini"
+            android:textColor="#1565C0"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+</LinearLayout>
