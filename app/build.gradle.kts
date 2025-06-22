@@ -3,6 +3,7 @@ import java.io.FileInputStream
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.kapt)
 }
 
 android {
@@ -68,5 +69,9 @@ dependencies {
     implementation(libs.okhttp)
     implementation(libs.gson)
     implementation(libs.core)
+    implementation(libs.room.runtime)
+    kapt(libs.room.compiler) // Dulu annotationProcessor, sekarang pakenya kapt
+    implementation(libs.room.ktx)
+    implementation(libs.lifecycle.viewmodel.ktx)
 
 }

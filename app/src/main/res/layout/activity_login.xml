@@ -13,7 +13,7 @@
         android:layout_height="120dp"
         android:src="@drawable/logo_unila"
         android:layout_marginBottom="16dp"
-        android:contentDescription="Logo" />
+        android:contentDescription="Logo Universitas Lampung" />
 
     <!-- Nama Aplikasi -->
     <TextView
